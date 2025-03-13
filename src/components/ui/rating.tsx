@@ -13,7 +13,7 @@ const Rating: React.FC<RatingProps> = ({ value, outOf = 5 }) => {
           ★
         </span>
       ))}
-      <span className="text-sm text-gray-600">{value}/{outOf}</span>
+      {/* <span className="text-sm text-gray-600">{value}/{outOf}</span> */}
     </div>
   );
 };

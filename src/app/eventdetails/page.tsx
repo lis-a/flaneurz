@@ -1,10 +1,17 @@
-'use client'
+"use client";
 
+// import MapPreview from "@/components/map-preview";
 import Button from "@/components/ui/button";
-import Rating from "@/components/ui/rating";
 import Tag from "@/components/ui/tag";
 import { useRouter } from "next/navigation";
 import React from "react";
+import dynamic from "next/dynamic";
+import Rating from "@/components/ui/rating";
+
+// Charger Leaflet dynamiquement pour éviter l'erreur côté serveur
+const MapPreview = dynamic(() => import("@/components/map-preview"), {
+  ssr: false, // Désactive le rendu côté serveur
+});
 
 const EventDetails = () => {
   const router = useRouter();
@@ -76,13 +83,43 @@ const EventDetails = () => {
           officia natus beatae.
         </p>
 
-        <div className="bg-gray-100 p-3 rounded-md">
-          <span className="text-gray-700 font-medium">
-            📍 2 Pl. Ferdinand Brunot, 75014 Paris
-          </span>
+        <div className="bg-gray-100 p-3 rounded-md flex flex-col gap-2">
+          <div className="flex gap-2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="size-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+              />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"
+              />
+            </svg>
+            <span className="font-medium">Adresse</span>
+          </div>
+          <div className="flex flex-col gap-2">
+            <span className="text-gray-700 font-medium">
+              2 Pl. Ferdinand Brunot, 75014 Paris
+            </span>
+            <div>
+              <MapPreview
+                latitude={48.83330254416944}
+                longitude={2.3269748306813978}
+              />
+            </div>
+          </div>
         </div>
 
-        <div className="flex flex-col justify-center items-center">
+        {/* <div className="flex flex-col justify-center items-center">
           <p className="font-medium">Note</p>
           <div className="flex gap-2">
             <svg
@@ -102,19 +139,60 @@ const EventDetails = () => {
 
             <span>2,5/5</span>
           </div>
-        </div>
+        </div> */}
 
         <div>
-          <p className="font-medium">Avis</p>
-          <div className="p-3 rounded-md bg-gray-50 dark:text-gray-700">
-            <p>“Super activité, j’ai adoré !” M. Dupont</p>
+          <div className="flex gap-2 mb-4">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="size-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 0 1 .865-.501 48.172 48.172 0 0 0 3.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z"
+              />
+            </svg>
+            <span className="font-medium">Avis</span>
+          </div>
+          <div className="p-3 rounded-md bg-gray-50 flex flex-col gap-3 dark:text-gray-700">
+            <div className="flex gap-2">
+              <div className="bg-gray-300 rounded-full size-12"></div>
+              <div className="flex flex-col gap-1">
+                <span className="font-semibold">Prénom</span>
+                <Rating value={3} />
+              </div>
+            </div>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum,
+              asperiores. Nobis perferendis voluptates dicta tenetur illum earum
+              molestias blanditiis labore.
+            </p>
           </div>
         </div>
+        <div className="p-3 rounded-md bg-gray-50 flex flex-col gap-3 dark:text-gray-700">
+          <div className="flex gap-2">
+            <div className="bg-gray-300 rounded-full size-12"></div>
+            <div className="flex flex-col gap-1">
+              <span className="font-semibold">Prénom</span>
+              <Rating value={3.5} />
+            </div>
+          </div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum,
+            asperiores. Nobis perferendis voluptates dicta tenetur illum earum
+            molestias blanditiis labore.
+          </p>
+        </div>
 
-        <div className="flex justify-center">
+        <div className="">
           <Button
             label="S'y rendre"
-            className="flex"
+            className="rounded-4xl text-xl w-full"
             onClick={() => router.push("itinerarychoice")}
           />
         </div>
