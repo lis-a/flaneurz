@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "./ui/button";
+import Image from "next/image";
 
 interface ItineraryCardProps {
   title: string;
@@ -25,7 +26,12 @@ const ItineraryCard: React.FC<ItineraryCardProps> = ({
   return (
     <div className="w-full p-4 border rounded-md bg-white shadow-sm flex gap-2 justify-between items-center">
       <div className="flex gap-4">
-        <img src={`/itinerary-card/${icon ?? "classic-itinerary.svg"}`} alt={alt} />
+        <Image
+          src={`/itinerary-card/${icon ?? "classic-itinerary.svg"}`}
+          alt={alt}
+          width={48}
+          height={48}
+        />
         <div className="flex flex-col gap-1">
           <h3 className="font-semibold">{title}</h3>
           {!isList && duration && distance && (

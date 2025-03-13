@@ -1,11 +1,8 @@
 "use client";
 
 import ItineraryCard from "@/components/itinerary-card";
-// import MapPreview from "@/components/map-preview";
 import React, { useState } from "react";
-import { useRouter } from "next/navigation";
 import dynamic from "next/dynamic";
-import { icon } from "leaflet";
 
 const itineraries = [
   {
@@ -49,11 +46,10 @@ const itineraries = [
 ];
 
 const MapPreview = dynamic(() => import("@/components/map-preview"), {
-  ssr: false, // Désactive le rendu côté serveur
+  ssr: false,
 });
 
 const ItineraryChoice = () => {
-  const router = useRouter();
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
