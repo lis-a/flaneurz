@@ -138,7 +138,7 @@ const ItineraryChoice = () => {
             {currentView === "main" ? (
               <>
                 <div className="flex justify-between items-center w-full">
-                  <h2 className="font-bold text-2xl">Itinéraires</h2>
+                  <h2 className="font-bold text-2xl dark:text-black">Itinéraires</h2>
                   <div className="w-8 h-8 flex items-center justify-center">
                     <button className="text-blue-600">
                       <svg
@@ -195,7 +195,7 @@ const ItineraryChoice = () => {
                         />
                       </svg>
                     </button>
-                    <h2 className="font-bold text-2xl">Itinéraire culture</h2>
+                    <h2 className="font-bold text-2xl dark:text-black">Itinéraire culture</h2>
                     <div className="w-6"></div> {/* Spacer for alignment */}
                   </div>
                   {culturalItineraries.map((itinerary, index) => (

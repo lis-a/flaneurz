@@ -17,7 +17,7 @@ const Tag: React.FC<TagProps> = ({ label, color = "blue", className }) => {
 
   return (
     <div className={`px-2 py-1 rounded-xl ${colorClasses[color]} ${className}`}>
-      <span className="text-sm font-bold">{label}</span>
+      <span className="text-sm font-bold dark:text-black">{label}</span>
     </div>
   );
 };

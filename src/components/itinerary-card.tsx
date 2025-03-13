@@ -33,7 +33,7 @@ const ItineraryCard: React.FC<ItineraryCardProps> = ({
           height={48}
         />
         <div className="flex flex-col gap-1">
-          <h3 className="font-semibold">{title}</h3>
+          <h3 className="font-semibold dark:text-black">{title}</h3>
           {!isList && duration && distance && (
             <p className="text-sm text-gray-600">
               {duration} • {distance}
@@ -43,7 +43,7 @@ const ItineraryCard: React.FC<ItineraryCardProps> = ({
         </div>
       </div>
       {isList ? (
-        <button onClick={onClick}>
+        <button onClick={onClick} className="dark:text-black">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
