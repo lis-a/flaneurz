@@ -16,7 +16,7 @@ const EventDetails = () => {
   const router = useRouter();
   return (
     <div className="max-w-sm mx-auto">
-      <div className="relative w-full h-48 bg-gray-300 rounded-md">
+      <div className="relative w-full h-56 bg-[url(/brocante.png)] rounded-md">
         <button className="absolute top-2 left-2 bg-white p-2 rounded-full">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -70,16 +70,18 @@ const EventDetails = () => {
       </div>
 
       <div className="flex gap-4 flex-col p-4">
-        <h1 className="text-xl font-bold">Exposition à la mairie du 14e</h1>
+        <h1 className="text-xl font-bold">Brocante du 11eme</h1>
         <div className="flex gap-2">
-          <Tag label="Culturel" />
-          <Tag label="Exposition" />
+          <Tag label="Seconde main" color="yellow" />
+          <Tag label="Marché" color="blue" />
+          <Tag label="Bons plans" color="red" />
         </div>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Est eius
-          accusantium culpa ea? Cupiditate consectetur placeat rem, repellendus
-          illo rerum commodi unde sunt perspiciatis nulla, praesentium ipsum
-          officia natus beatae.
+        <p className="font-bold">
+          Venez découvrir notre charmante brocante au cœur du 11e ! Chaque objet
+          raconte une histoire, chaque stand recèle des trésors cachés. Des
+          antiquités aux objets vintage, en passant par les créations
+          artisanales, notre brocante offre une expérience unique pour les
+          chineurs et les amateurs de pièces authentiques.
         </p>
 
         <div className="bg-gray-100 p-3 rounded-md flex flex-col gap-2">
@@ -107,12 +109,12 @@ const EventDetails = () => {
           </div>
           <div className="flex flex-col gap-2">
             <span className="text-gray-700 font-medium">
-              2 Pl. Ferdinand Brunot, 75014 Paris
+              Place de la République, 75011 Paris
             </span>
             <div>
               <MapPreview
-                latitude={48.83330254416944}
-                longitude={2.3269748306813978}
+                latitude={48.86722964698431}
+                longitude={2.3635289813164597}
               />
             </div>
           </div>
@@ -162,14 +164,14 @@ const EventDetails = () => {
             <div className="flex gap-2">
               <div className="bg-gray-300 rounded-full size-12"></div>
               <div className="flex flex-col gap-1">
-                <span className="font-semibold">Prénom</span>
-                <Rating value={3} />
+                <span className="font-semibold">Sophie A.</span>
+                <Rating value={4} />
               </div>
             </div>
             <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum,
-              asperiores. Nobis perferendis voluptates dicta tenetur illum earum
-              molestias blanditiis labore.
+              Une brocante pleine de charme ! Mon ami a déniché une lampe art déco
+              magnifique et un service à thé vintage à prix raisonnable.
+              Trèd conviviale et les exposants étaient accueillants.
             </p>
           </div>
         </div>
@@ -177,14 +179,13 @@ const EventDetails = () => {
           <div className="flex gap-2">
             <div className="bg-gray-300 rounded-full size-12"></div>
             <div className="flex flex-col gap-1">
-              <span className="font-semibold">Prénom</span>
-              <Rating value={3.5} />
+              <span className="font-semibold">Thomas B.</span>
+              <Rating value={4.5} />
             </div>
           </div>
           <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nostrum,
-            asperiores. Nobis perferendis voluptates dicta tenetur illum earum
-            molestias blanditiis labore.
+            Excellente découverte ce dimanche ! Cette petite brocante de
+            quartier cache de véritables trésors. Organisation parfaite et bel emplacement ombragé.
           </p>
         </div>
 

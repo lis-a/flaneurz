@@ -8,16 +8,16 @@ interface TagProps {
 
 const Tag: React.FC<TagProps> = ({ label, color = "blue", className }) => {
   const colorClasses: { [key: string]: string } = {
-    blue: "bg-blue-100 text-blue-800",
-    red: "bg-red-100 text-red-800",
-    green: "bg-green-100 text-green-800",
-    yellow: "bg-yellow-100 text-yellow-800",
-    gray: "bg-gray-100 text-gray-800",
+    blue: "bg-[#BECBE9]",
+    red: "bg-[#FFF3F4]",
+    green: "bg-green-100 ",
+    yellow: "bg-[#FFF5D9]",
+    gray: "bg-gray-100",
   };
 
   return (
-    <div className={`px-2 py-1 rounded-sm ${colorClasses[color]} ${className}`}>
-      <span className="text-sm font-medium">{label}</span>
+    <div className={`px-2 py-1 rounded-xl ${colorClasses[color]} ${className}`}>
+      <span className="text-sm font-bold">{label}</span>
     </div>
   );
 };

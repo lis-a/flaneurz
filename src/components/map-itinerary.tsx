@@ -28,7 +28,7 @@ const MapItinerary: React.FC<MapItineraryProps> = ({
     <MapContainer
       center={center}
       zoom={zoom}
-      style={{ height: "500px", width: "100%" }}
+      style={{ height: "100%", width: "100%", position: "fixed" }}
     >
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
