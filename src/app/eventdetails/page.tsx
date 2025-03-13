@@ -171,7 +171,7 @@ const EventDetails = () => {
             <p>
               Une brocante pleine de charme ! Mon ami a déniché une lampe art déco
               magnifique et un service à thé vintage à prix raisonnable.
-              Trèd conviviale et les exposants étaient accueillants.
+              Très cool et les exposants étaient accueillants.
             </p>
           </div>
         </div>
