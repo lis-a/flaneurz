@@ -9,7 +9,7 @@ interface ButtonProps {
 const Button: React.FC<ButtonProps> = ({ label, onClick, className }) => {
   return (
     <button
-      className={`bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 transition ${className}`}
+      className={`bg-[#3643BA] text-white py-2 px-4 rounded-md hover:bg-[#5962aa] transition ${className}`}
       onClick={onClick}
     >
       {label}

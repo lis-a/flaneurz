@@ -60,7 +60,7 @@ const ItineraryCard: React.FC<ItineraryCardProps> = ({
           </svg>
         </button>
       ) : (
-        <Button label="Go !" onClick={onClick} />
+        <Button label="GO" onClick={onClick}/>
       )}
     </div>
   );

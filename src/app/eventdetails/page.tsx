@@ -8,9 +8,8 @@ import React from "react";
 import dynamic from "next/dynamic";
 import Rating from "@/components/ui/rating";
 
-// Charger Leaflet dynamiquement pour éviter l'erreur côté serveur
 const MapPreview = dynamic(() => import("@/components/map-preview"), {
-  ssr: false, // Désactive le rendu côté serveur
+  ssr: false,
 });
 
 const EventDetails = () => {

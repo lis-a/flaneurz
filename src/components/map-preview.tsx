@@ -21,12 +21,12 @@ const MapPreview: React.FC<MapPreviewProps> = ({
     const map = L.map("map").setView([latitude, longitude], 13);
 
     const markerIcon = L.icon({
-      iconUrl: "/icons/marker.png",
-      shadowUrl: "/icons/marker-shadow.png",
-      iconSize: [25, 41],
-      shadowSize: [41, 41],
+      iconUrl: "/icons/flower.png",
+      // shadowUrl: "/icons/marker-shadow.png",
+      iconSize: [34.3, 38.15],
+      // shadowSize: [41, 41],
       iconAnchor: [12, 41],
-      shadowAnchor: [12, 41],
+      // shadowAnchor: [12, 41],
       popupAnchor: [0, -41],
     });
 

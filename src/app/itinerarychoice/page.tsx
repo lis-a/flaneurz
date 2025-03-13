@@ -4,6 +4,10 @@ import ItineraryCard from "@/components/itinerary-card";
 import React, { useState } from "react";
 import dynamic from "next/dynamic";
 
+const MapItinerary = dynamic(() => import("@/components/map-itinerary"), {
+  ssr: false, 
+});
+
 const itineraries = [
   {
     title: "Itinéraire classique",
@@ -45,10 +49,6 @@ const itineraries = [
   },
 ];
 
-const MapPreview = dynamic(() => import("@/components/map-preview"), {
-  ssr: false,
-});
-
 const ItineraryChoice = () => {
   const [isExpanded, setIsExpanded] = useState(false);
 
@@ -76,15 +76,8 @@ const ItineraryChoice = () => {
         </button> */}
 
         <div className="absolute top-0 left-0 w-full h-1/2 bg-gray-300">
-          <MapPreview
-            latitude={48.8}
-            longitude={2.3}
-            itinerary={[
-              [48.83159747205117, 2.31639718352266],
-              [48.83330254416944, 2.3269748306813978],
-            ]}
-            className="fixed top-0 left-0"
-          />
+        
+          <MapItinerary waypoints={[[48.83159747205117, 2.31639718352266], [48.83330254416944, 2.3269748306813978]]} />
           ,
         </div>
 

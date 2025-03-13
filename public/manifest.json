@@ -1,6 +1,6 @@
 {
     "name": "Flaneurz",
-    "short_name": "Flaneurz",
+    "short_name": "flaneurz",
     "description": "Trouvez des événements et marchez vers eux avec des itinéraires personnalisés.",
     "start_url": "/",
     "display": "standalone",
