@@ -17,7 +17,7 @@ const EventDetails = () => {
   return (
     <div className="max-w-sm mx-auto">
       <div className="relative w-full h-56 bg-[url(/brocante.png)] rounded-md">
-        <button className="absolute top-2 left-2 bg-white p-2 rounded-full">
+        <button className="absolute top-2 left-2 bg-white p-2 rounded-full dark:text-black" onClick={() => router.push("/")}>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -85,7 +85,7 @@ const EventDetails = () => {
         </p>
 
         <div className="bg-gray-100 p-3 rounded-md flex flex-col gap-2">
-          <div className="flex gap-2">
+          <div className="flex gap-2 dark:text-black">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -105,7 +105,7 @@ const EventDetails = () => {
                 d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"
               />
             </svg>
-            <span className="font-medium">Adresse</span>
+            <span className="font-mediu">Adresse</span>
           </div>
           <div className="flex flex-col gap-2">
             <span className="text-gray-700 font-medium">
